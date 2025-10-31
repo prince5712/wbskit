@@ -7,17 +7,17 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5><?= SITE_BRAND ?></h5>
-                    <p class="text-muted mb-0"><?= t('footer_description', 'A modern PHP starter kit with Bootstrap integration.') ?></p>
+                    <p class="text-light mb-0"><?= t('footer_description', 'A modern PHP starter kit with Bootstrap integration.') ?></p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0 text-muted">
+                    <p class="mb-0 text-light">
                         &copy; <?= date('Y') ?> <?= SITE_AUTHOR ?>. <?= t('footer_rights', 'All rights reserved.') ?>
                     </p>
                     <div class="mt-2">
-                        <a href="#" class="text-muted me-3" title="<?= t('footer_privacy', 'Privacy Policy') ?>">
+                        <a href="#" class="text-light-emphasis me-3" title="<?= t('footer_privacy', 'Privacy Policy') ?>">
                             <?= t('footer_privacy', 'Privacy') ?>
                         </a>
-                        <a href="#" class="text-muted" title="<?= t('footer_terms', 'Terms of Service') ?>">
+                        <a href="#" class="text-light-emphasis" title="<?= t('footer_terms', 'Terms of Service') ?>">
                             <?= t('footer_terms', 'Terms') ?>
                         </a>
                     </div>

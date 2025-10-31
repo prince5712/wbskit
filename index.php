@@ -14,22 +14,22 @@ include __DIR__ . '/@/header.php';
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <!-- Hero Section -->
-            <div class="text-center mb-5">
+            <div class="text-center mb-4 mb-md-5">
                 <i class="bi bi-bootstrap-fill display-1 text-primary mb-3"></i>
                 <h1 class="display-4 fw-bold mb-3"><?= t('welcome_title', 'Welcome to WBS Kit') ?></h1>
-                <p class="lead text-muted">
+                <p class="lead text-muted px-2">
                     <?= t('welcome_subtitle', 'A comprehensive PHP starter template with Bootstrap 5, multi-language support, and modern features.') ?>
                 </p>
             </div>
 
             <!-- Features Grid -->
-            <div class="row g-4 mb-5">
-                <div class="col-md-6">
+            <div class="row g-3 g-md-4 mb-4 mb-md-5">
+                <div class="col-sm-12 col-md-6">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="bi bi-phone display-6 text-success mb-3"></i>
-                            <h5 class="card-title"><?= t('feature_responsive', 'Fully Responsive') ?></h5>
-                            <p class="card-text text-muted">
+                        <div class="card-body text-center p-3 p-md-4">
+                            <i class="bi bi-phone display-6 text-success mb-2 mb-md-3"></i>
+                            <h5 class="card-title h6 h5-md"><?= t('feature_responsive', 'Fully Responsive') ?></h5>
+                            <p class="card-text text-muted small">
                                 <?= t('feature_responsive_desc', 'Works perfectly on all devices - smartphones, tablets, and desktops.') ?>
                             </p>
                         </div>

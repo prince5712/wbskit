@@ -1,6 +1,82 @@
 
 /* WBS Kit Custom Styles */
 
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3.5rem;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 576px) {
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .my-5 {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.75rem;
+    }
+
+    .card-body {
+        padding: 1.25rem;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .card:hover {
+        transform: none;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+
+    .navbar-brand:hover {
+        transform: none;
+    }
+}
 /* Loading Animation */
 @keyframes fadeInUp {
     from {
