@@ -23,7 +23,7 @@ include '@/header.php';
         <p class="text-muted"><?= t('splash_message', 'Please wait while we load the application...') ?></p>
         
         <!-- Progress Bar -->
-        <div class="progress mx-auto" style="width: 300px; height: 4px;">
+        <div class="progress mx-auto" style="width: 90%; max-width: 300px; height: 4px;">
             <div class="progress-bar progress-bar-striped progress-bar-animated" 
                  role="progressbar" 
                  style="width: 0%" 

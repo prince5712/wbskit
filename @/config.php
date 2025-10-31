@@ -28,6 +28,7 @@ define('DEFAULT_THEME', 'auto');
 $available_languages = [
     'en' => 'English',
     'es' => 'Español',
+    'hi' => 'Hindi',
     'fr' => 'Français',
     'de' => 'Deutsch'
 ];

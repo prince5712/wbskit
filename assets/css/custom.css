@@ -98,6 +98,29 @@
     transition: all 0.3s ease;
 }
 
+/* Splash Screen Responsive Styles */
+@media (max-width: 576px) {
+    .spinner-border {
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+
+    .display-1 {
+        font-size: 3rem !important;
+    }
+
+    .h4 {
+        font-size: 1.4rem !important;
+    }
+
+    .text-muted {
+        font-size: 0.9rem;
+    }
+
+    .min-vh-100 {
+        padding: 1rem;
+    }
+}
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
