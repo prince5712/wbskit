@@ -121,60 +121,8 @@ $page_description = $page_description ?? SITE_DESCRIPTION;
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <!-- Utility Controls for Mobile -->
-            <div class="d-flex gap-2 order-1 d-lg-none ms-2">
-                <!-- Language Switcher Mobile -->
-                <div class="dropdown">
-                    <button class="btn btn-sm btn-outline-light dropdown-toggle d-flex align-items-center py-1"
-                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-globe2 me-1"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                        <?php foreach ($available_languages as $code => $name): ?>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center <?= $code === $current_language ? 'active' : '' ?>"
-                                    href="?lang=<?= $code ?>">
-                                    <span class="me-2"><?= $name ?></span>
-                                    <?php if ($code === $current_language): ?>
-                                        <i class="bi bi-check2 ms-auto"></i>
-                                    <?php endif; ?>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-    
-                <!-- Theme Toggle Mobile -->
-                <div class="dropdown">
-                    <button class="btn btn-sm btn-outline-light dropdown-toggle d-flex align-items-center py-1"
-                        id="bd-theme-mobile" type="button" data-bs-toggle="dropdown" aria-label="Toggle theme">
-                        <i class="bi bi-circle-half theme-icon-active"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="bd-theme-mobile">
-                        <li>
-                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-                                <i class="bi bi-sun-fill me-2 opacity-75"></i>
-                                <?= t('theme_light', 'Light') ?>
-                                <i class="bi bi-check2 ms-auto d-none"></i>
-                                </button>
-                                </li>
-                                <li>
-                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
-                                <i class="bi bi-moon-stars-fill me-2 opacity-75"></i>
-                                <?= t('theme_dark', 'Dark') ?>
-                                <i class="bi bi-check2 ms-auto d-none"></i>
-                                </button>
-                                </li>
-                                <li>
-                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
-                                <i class="bi bi-circle-half me-2 opacity-75"></i>
-                                <?= t('theme_auto', 'Auto') ?>
-                                <i class="bi bi-check2 ms-auto d-none"></i>
-                                </button>
-                                </li>
-                                </ul>
-                                </div>
-            </div>
+            <!-- Navbar toggle button only -->
+            
             
             <div class="collapse navbar-collapse order-2" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -187,61 +135,6 @@ $page_description = $page_description ?? SITE_DESCRIPTION;
                             </a>
                         </li>
                     <?php endforeach; ?>
-
-                    <!-- Utility Controls for Desktop -->
-                    <li class="nav-item d-none d-lg-flex align-items-center ms-2 gap-2">
-                        <!-- Language Switcher Desktop -->
-                        <div class="dropdown">
-                            <button class="btn btn-sm btn-outline-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-globe2 me-2"></i>
-                                <span class="fw-medium"><?= $available_languages[$current_language] ?></span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                                <?php foreach ($available_languages as $code => $name): ?>
-                                <li>
-                                        <a class="dropdown-item d-flex align-items-center <?= $code === $current_language ? 'active' : '' ?>"
-                                            href="?lang=<?= $code ?>">
-                                           <span class="me-2"><?= $name ?></span>
-                                        <?php if ($code === $current_language): ?>
-                                            <i class="bi bi-check2 ms-auto"></i>
-                                        <?php endif; ?>
-                                        </a>
-                                        </li>
-                                        <?php endforeach; ?>
-                                        </ul>
-                                        </div>
-
-                        <!-- Theme Toggle Desktop -->
-                        <div class="dropdown">
-                            <button class="btn btn-sm btn-outline-light dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" data-bs-toggle="dropdown" aria-label="Toggle theme">
-                                <i class="bi bi-circle-half me-2 theme-icon-active"></i>
-                                <span class="fw-medium"><?= t('theme', 'Theme') ?></span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="bd-theme">
-                                <li>
-                                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-                                        <i class="bi bi-sun-fill me-2 opacity-75"></i>
-                                        <?= t('theme_light', 'Light') ?>
-                                        <i class="bi bi-check2 ms-auto d-none"></i>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
-                                        <i class="bi bi-moon-stars-fill me-2 opacity-75"></i>
-                                        <?= t('theme_dark', 'Dark') ?>
-                                        <i class="bi bi-check2 ms-auto d-none"></i>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
-                                        <i class="bi bi-circle-half me-2 opacity-75"></i>
-                                        <?= t('theme_auto', 'Auto') ?>
-                                        <i class="bi bi-check2 ms-auto d-none"></i>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
