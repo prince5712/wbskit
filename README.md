@@ -107,8 +107,6 @@ Customize the appearance in `assets/css/custom.css`:
 
 ## 🔒 Security Features
 
-- XSS Protection
-- CSRF Protection
 - Content Security Policy
 - Copy-paste protection (configurable)
 - Secure cookie handling
@@ -116,18 +114,8 @@ Customize the appearance in `assets/css/custom.css`:
 ## 🎯 Performance
 
 - Minified assets
-- Lazy loading images
 - Optimized resource loading
 - Browser caching
-- Performance monitoring
-
-## 📱 Progressive Web App Features
-
-- Offline functionality
-- Add to home screen
-- Background sync
-- Push notifications (configurable)
-- Service worker support
 
 ## 🤝 Contributing
 
@@ -139,7 +127,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**prinsberwa**
+**@prinsberwa**
 
 ## 📞 Support
 
@@ -147,4 +135,4 @@ For support, please create an issue in the GitHub repository or contact the auth
 
 ---
 
-Made with ❤️ using WBS Kit
+Made with ❤️ using Bootstrap
