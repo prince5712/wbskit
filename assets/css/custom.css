@@ -1,6 +1,22 @@
 
 /* WBS Kit Custom Styles */
 
+/* Footer Styles */
+.footer {
+    position: relative;
+}
+
+.footer .hover-opacity {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.footer .hover-opacity:hover {
+    opacity: 0.8;
+}
+
+.text-light-emphasis {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
 /* Responsive Utilities */
 @media (max-width: 768px) {
     .display-1 {
