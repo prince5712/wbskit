@@ -39,9 +39,9 @@ define('SITE_BRAND', 'WBS Kit');
 // Navigation Configuration
 $nav_items = [
     ['title' => 'nav_home', 'href' => 'index.php', 'active' => false],
-    ['title' => 'nav_about', 'href' => '#', 'active' => false],
-    ['title' => 'nav_services', 'href' => '#', 'active' => false],
-    ['title' => 'nav_contact', 'href' => '#', 'active' => false]
+    ['title' => 'nav_about', 'href' => 'about.php', 'active' => false],
+    ['title' => 'nav_services', 'href' => 'services.php', 'active' => false],
+    ['title' => 'nav_contact', 'href' => 'contact.php', 'active' => false]
 ];
 
 // Language Management
