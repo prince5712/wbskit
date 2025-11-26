@@ -45,7 +45,9 @@ $nav_items = [
 ];
 
 // Language Management
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $current_language = $_SESSION['language'] ?? $_GET['lang'] ?? DEFAULT_LANGUAGE;
 if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $available_languages)) {
     $_SESSION['language'] = $_GET['lang'];

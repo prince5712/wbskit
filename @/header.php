@@ -42,6 +42,8 @@ $page_description = $page_description ?? SITE_DESCRIPTION;
     <!-- Custom CSS -->
     <link href="<?= CSS_PATH ?>custom.css" rel="stylesheet">
     
+    <!-- Splash Script -->
+    <script src="<?= JS_PATH ?>splash.js" defer></script>
     <!-- Prevent Copy-Paste and Zoom -->
     <style>
         /* Disable text selection */

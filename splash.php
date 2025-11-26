@@ -1,7 +1,29 @@
-<?php 
+<?php
+// Start session for splash screen tracking
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once __DIR__ . '/@/config.php';
+
+// Check if splash should be skipped
+$skip_splash = isset($_GET['skip_splash']) || (isset($_SESSION['splash_shown']) && $_SESSION['splash_shown'] === true);
+
+if (!$skip_splash) {
+    // Mark splash as shown in session
+    $_SESSION['splash_shown'] = true;
+}
+
+// If splash should be skipped, redirect to home
+if ($skip_splash && isset($_GET['skip_splash'])) {
+    // Redirect to index without splash
+    header('Location: index.php', true, 302);
+    exit();
+}
+
 $page_title = t('splash_title', 'Loading - WBS Kit');
 $page_description = t('splash_description', 'Loading WBS Kit application...');
-include '@/header.php'; 
+include __DIR__ . '/@/header.php';
 ?>
 
 <div class="d-flex align-items-center justify-content-center min-vh-100">
@@ -42,58 +64,88 @@ include '@/header.php';
 </div>
 
 <script>
-let progress = 0;
-const progressBar = document.getElementById('loadingProgress');
-const continueBtn = document.getElementById('continueBtn');
-
-// Simulate loading progress
-const loadingInterval = setInterval(() => {
-    progress += Math.random() * 15;
-    if (progress > 100) progress = 100;
+(function() {
+    'use strict';
     
-    progressBar.style.width = progress + '%';
+    let progress = 0;
+    const progressBar = document.getElementById('loadingProgress');
+    const continueBtn = document.getElementById('continueBtn');
+    let isRedirecting = false;
     
-    if (progress >= 100) {
+    // Simulate loading progress
+    const loadingInterval = setInterval(() => {
+        if (isRedirecting) {
+            clearInterval(loadingInterval);
+            return;
+        }
+        
+        progress += Math.random() * 15;
+        if (progress > 95) progress = 95; // Stop at 95% until actual completion
+        
+        progressBar.style.width = progress + '%';
+    }, 300);
+    
+    // Set timeout for splash to complete and redirect
+    const splashTimeout = setTimeout(() => {
         clearInterval(loadingInterval);
-        setTimeout(() => {
+        
+        if (!isRedirecting) {
+            progressBar.style.width = '100%';
             checkConnectionAndContinue();
-        }, 1000);
-    }
-}, 200);
-
-function checkConnectionAndContinue() {
-    if (navigator.onLine) {
-        // Auto redirect after loading
+        }
+    }, 2000); // 2 second splash duration
+    
+    function checkConnectionAndContinue() {
+        if (isRedirecting) return;
+        isRedirecting = true;
+        
         setTimeout(() => {
-            window.location.href = 'index.php';
+            if (navigator.onLine) {
+                // Redirect to home with splash flag
+                window.location.href = 'index.php?skip_splash=1';
+            } else {
+                // Show offline page
+                window.location.href = 'offline.php';
+            }
         }, 500);
-    } else {
-        // Show offline page if no connection
-        window.location.href = 'offline.php';
+        
+        // Show manual continue button as fallback
+        setTimeout(() => {
+            if (!isRedirecting) {
+                continueBtn.classList.remove('d-none');
+            }
+        }, 3000);
     }
     
-    // Show manual continue button after 3 seconds
+    function continueToSite() {
+        if (isRedirecting) return;
+        isRedirecting = true;
+        
+        if (navigator.onLine) {
+            window.location.href = 'index.php?skip_splash=1';
+        } else {
+            window.location.href = 'offline.php';
+        }
+    }
+    
+    // Expose function to global scope for button
+    window.continueToSite = continueToSite;
+    
+    // Check if user is back online
+    window.addEventListener('online', () => {
+        if (!isRedirecting) {
+            console.log('Connection restored during splash');
+        }
+    });
+    
+    // Fallback: redirect after max wait time
     setTimeout(() => {
-        continueBtn.classList.remove('d-none');
-    }, 3000);
-}
-
-function continueToSite() {
-    if (navigator.onLine) {
-        window.location.href = 'index.php';
-    } else {
-        window.location.href = 'offline.php';
-    }
-}
-
-// Check connection periodically
-setInterval(() => {
-    if (!navigator.onLine) {
-        window.location.href = 'offline.php';
-    }
-}, 5000);
+        if (!isRedirecting) {
+            isRedirecting = true;
+            checkConnectionAndContinue();
+        }
+    }, 5000);
+})();
 </script>
 
-<?php include '@/footer.php'; ?>
-
-<?php
+<?php include __DIR__ . '/@/footer.php'; ?>

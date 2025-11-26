@@ -1,4 +1,23 @@
 <?php
+// Check if this is first visit - if so, show splash screen
+if (!isset($_GET['skip_splash']) && !isset($_SESSION['splash_shown'])) {
+    // Start session if not already started
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    // Redirect to splash screen on first visit
+    header('Location: splash.php', true, 302);
+    exit();
+}
+
+// Start session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Mark that we've gone past the splash
+$_SESSION['splash_shown'] = true;
+
 // Config लोड करना ज़रूरी है ताकि t() और बाकी डिफ़ाइन किए गए कांस्टैंट्स मिलें
 require_once __DIR__ . '/@/config.php';
 

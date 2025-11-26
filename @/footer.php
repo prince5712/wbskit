@@ -104,6 +104,16 @@
                                 </div>
                                 </div>
                                 
+                                <!-- Test Splash Link -->
+                                <div class="row mt-3 pt-3 border-top border-secondary-subtle">
+                                    <div class="col-12 text-center">
+                                        <button type="button" class="btn btn-sm btn-link text-light text-decoration-none opacity-75 hover-opacity" 
+                                                onclick="resetAndShowSplash()" title="<?= t('test_splash', 'View splash screen again') ?>">
+                                            <i class="bi bi-arrow-repeat me-1"></i>
+                                            <?= t('test_splash', 'View Splash') ?>
+                                        </button>
+                                    </div>
+                                </div>
                                 <!-- Copyright Section -->
                                 <div class="row mt-5 pt-4 border-top border-secondary">
                                     <div class="col-12">
