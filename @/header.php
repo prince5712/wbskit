@@ -137,6 +137,19 @@ $page_description = $page_description ?? SITE_DESCRIPTION;
                             </a>
                         </li>
                     <?php endforeach; ?>
+                    <!-- Auth Buttons -->
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-outline-light btn-sm nav-auth-btn" href="login.php">
+                            <i class="bi bi-box-arrow-in-right me-1"></i>
+                            <?= t('Login', 'Login') ?>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-light btn-sm nav-auth-btn" href="register.php">
+                            <i class="bi bi-person-plus me-1"></i>
+                            <?= t('Register', 'Register') ?>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
