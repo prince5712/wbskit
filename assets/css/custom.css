@@ -4,6 +4,7 @@
 /* Footer Styles */
 .footer {
     position: relative;
+    background-color: #000000 !important;
 }
 
 .footer .hover-opacity {
@@ -157,6 +158,9 @@
 }
 
 /* Navbar Styling */
+.navbar {
+    background-color: #000000 !important;
+}
 .navbar-brand {
     transition: all 0.3s ease;
 }
