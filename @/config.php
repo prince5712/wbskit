@@ -9,7 +9,7 @@ define('SITE_TITLE', 'WBS Kit - Web Boilerplate Starter');
 define('SITE_DESCRIPTION', 'WBS Kit – A responsive PHP starter template using Bootstrap, supporting light/dark mode, multi-language, and offline handling.');
 define('SITE_KEYWORDS', 'PHP, Bootstrap, Starter Kit, Responsive, Dark Mode, Offline, Template');
 define('SITE_AUTHOR', 'prinsberwa');
-define('SITE_URL', '/');
+define('SITE_URL', 'http://localhost/wbskit/');
 define('THEME_COLOR_LIGHT', '#ffffff');
 define('THEME_COLOR_DARK', '#000000');
 
