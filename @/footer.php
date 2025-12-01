@@ -2,141 +2,156 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-5 bg-dark text-white border-top">
-        <div class="container">
+    <footer class="footer mt-auto bg-black text-white">
+        <div class="container-fluid py-5">
             <!-- Main Footer Content -->
-            <div class="row gy-4">
-                <!-- Brand Section -->
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="mb-3 text-white fw-bold"><?= SITE_BRAND ?></h5>
-                    <p class="mb-3 text-light-emphasis">
-                        <?= t('footer_description', 'A modern PHP starter kit with Bootstrap integration.') ?>
-                    </p>
-                </div>
-
-                <!-- Social Links Section -->
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="mb-3 text-white fw-bold"><?= t('footer_connect', 'Connect With Us') ?></h5>
-                    <div class="d-flex gap-3" aria-label="Social links">
-                        <a href="#" class="link-light fs-5 hover-opacity" aria-label="GitHub">
-                            <i class="bi bi-github" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="link-light fs-5 hover-opacity" aria-label="Twitter">
-                            <i class="bi bi-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="link-light fs-5 hover-opacity" aria-label="Facebook">
-                            <i class="bi bi-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="link-light fs-5 hover-opacity" aria-label="LinkedIn">
-                            <i class="bi bi-linkedin" aria-hidden="true"></i>
-                        </a>
+            <div class="container">
+                <div class="row g-4 mb-5">
+                    <!-- Brand & Description -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-brand">
+                            <h5 class="mb-3 fw-bold text-white"><?= SITE_BRAND ?></h5>
+                            <p class="mb-0 text-white-50">
+                                <?= t('footer_description', 'A modern PHP starter kit with Bootstrap integration.') ?>
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Legal & Settings Section -->
-                <div class="col-lg-4 col-md-12">
-                    <h5 class="mb-3 text-white fw-bold"><?= t('footer_legal', 'Legal') ?></h5>
-                    <div class="d-flex flex-column gap-2">
-                        <a href="#" class="link-light text-decoration-none hover-opacity"
-                            title="<?= t('footer_privacy', 'Privacy Policy') ?>">
-                            <?= t('footer_privacy', 'Privacy Policy') ?>
-                        </a>
-                        <a href="#" class="link-light text-decoration-none hover-opacity" title="<?= t('footer_terms', 'Terms of Service') ?>">
-                            <?= t('footer_terms', 'Terms of Service') ?>
-                        </a>
-                        
-                        <!-- Settings Section -->
-                        <div class="d-flex gap-2 mt-3">
-                            <!-- Language Switcher -->
-                            <div class="dropdown">
-                                <button class="btn btn-sm btn-outline-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-globe2 me-2" aria-hidden="true"></i>
-                                    <span class="fw-medium"><?= $available_languages[$current_language] ?></span>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <?php foreach ($available_languages as $code => $name): ?>
-                                        <li>
-                                            <a class="dropdown-item d-flex align-items-center <?= $code === $current_language ? 'active' : '' ?>"
-                                                href="?lang=<?= $code ?>">
-                                                <span class="me-2"><?= $name ?></span>
-                                                <?php if ($code === $current_language): ?>
-                                                    <i class="bi bi-check2 ms-auto"></i>
-                                                <?php endif; ?>
-                                            </a>
-                                        </li>
-                                    <?php endforeach; ?>
-                                </ul>
+                    <!-- Quick Links -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="text-white fw-bold mb-3 text-uppercase small">
+                            <?= t('footer_links', 'Quick Links') ?>
+                        </h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="index.php" class="text-white-50 text-decoration-none footer-link">
+                                    <?= t('nav_home', 'Home') ?>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="about.php" class="text-white-50 text-decoration-none footer-link">
+                                    <?= t('nav_about', 'About') ?>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="services.php" class="text-white-50 text-decoration-none footer-link">
+                                    <?= t('nav_services', 'Services') ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.php" class="text-white-50 text-decoration-none footer-link">
+                                    <?= t('nav_contact', 'Contact') ?>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="text-white fw-bold mb-3 text-uppercase small">
+                            <?= t('footer_legal', 'Legal') ?>
+                        </h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="privacy-policy.php" class="text-white-50 text-decoration-none footer-link">
+                                    <?= t('footer_privacy', 'Privacy Policy') ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="terms-of-service.php" class="text-white-50 text-decoration-none footer-link">
+                                    <?= t('footer_terms', 'Terms of Service') ?>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="text-white fw-bold mb-3 text-uppercase small">
+                            <?= t('footer_connect', 'Connect') ?>
+                                </h6>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="text-white-50 text-decoration-none footer-social" aria-label="GitHub">
+                                        <i class="bi bi-github fs-5"></i>
+                                    </a>
+                                    <a href="#" class="text-white-50 text-decoration-none footer-social" aria-label="Twitter">
+                                        <i class="bi bi-twitter fs-5"></i>
+                                    </a>
+                                    <a href="#" class="text-white-50 text-decoration-none footer-social" aria-label="Facebook">
+                                        <i class="bi bi-facebook fs-5"></i>
+                                    </a>
+                                    <a href="#" class="text-white-50 text-decoration-none footer-social" aria-label="LinkedIn">
+                                        <i class="bi bi-linkedin fs-5"></i>
+                                    </a>
                                 </div>
-                                
-                                <!-- Theme Toggle -->
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-light dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle theme">
-                                        <i class="bi bi-circle-half me-2 theme-icon-active" aria-hidden="true"></i>
-                                        <span class="fw-medium"><?= t('theme', 'Theme') ?></span>
-                                    </button>
-                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme">
-                                        <li>
-                                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-                                                <i class="bi bi-sun-fill me-2 opacity-75"></i>
-                                                <?= t('theme_light', 'Light') ?>
-                                                <i class="bi bi-check2 ms-auto d-none"></i>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
-                                                <i class="bi bi-moon-stars-fill me-2 opacity-75"></i>
-                                                <?= t('theme_dark', 'Dark') ?>
-                                                <i class="bi bi-check2 ms-auto d-none"></i>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
-                                                <i class="bi bi-circle-half me-2 opacity-75"></i>
-                                                <?= t('theme_auto', 'Auto') ?>
-                                                <i class="bi bi-check2 ms-auto d-none"></i>
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                                
-                                <!-- Test Splash Link -->
-                                <div class="row mt-3 pt-3 border-top border-secondary-subtle">
-                                    <div class="col-12 text-center">
-                                        <button type="button" class="btn btn-sm btn-link text-light text-decoration-none opacity-75 hover-opacity" 
-                                                onclick="resetAndShowSplash()" title="<?= t('test_splash', 'View splash screen again') ?>">
-                                            <i class="bi bi-arrow-repeat me-1"></i>
-                                            <?= t('test_splash', 'View Splash') ?>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- Copyright Section -->
-                                <div class="row mt-5 pt-4 border-top border-secondary">
-                                    <div class="col-12">
-                                        <p class="text-light-emphasis text-center mb-0">
-                                            &copy; <?= date('Y') ?> <?= SITE_AUTHOR ?>. <?= t('footer_rights', 'All rights reserved.') ?>
-                                        </p>
-                                    </div>
+                            </div>
+                            </div>
+
+                <!-- Footer Divider -->
+                <hr class="border-secondary-emphasis my-4">
+
+                <!-- Bottom Section -->
+                <div class="row align-items-center">
+                    <!-- Copyright -->
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <p class="text-white-50 mb-0 small">
+                            &copy; <?= date('Y') ?> <?= SITE_AUTHOR ?>. <?= t('footer_rights', 'All rights reserved.') ?>
+                        </p>
+                    </div>
+                
+                    <!-- Settings -->
+                    <div class="col-md-6 d-flex justify-content-md-end gap-3">
+                        <!-- Language Switcher -->
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="<?= t('theme', 'Language') ?>">
+                                <i class="bi bi-globe2" aria-hidden="true"></i>
+                                <span class="fw-medium d-none d-sm-inline"><?= $available_languages[$current_language] ?></span>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
                                 <?php foreach ($available_languages as $code => $name): ?>
-                                    <li>
+                                <li>
                                         <a class="dropdown-item d-flex align-items-center <?= $code === $current_language ? 'active' : '' ?>"
                                             href="?lang=<?= $code ?>">
-                                            <span class="me-2"><?= $name ?></span>
+                                            <span><?= $name ?></span>
                                             <?php if ($code === $current_language): ?>
                                                 <i class="bi bi-check2 ms-auto"></i>
                                             <?php endif; ?>
                                         </a>
-                                    </li>
-                                <?php endforeach; ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                        </ul>
+                                        </div>
+                                        
+                                        <!-- Theme Toggle -->
+                                        <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-2" id="bd-theme" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="<?= t('theme', 'Toggle theme') ?>">
+                                <i class="bi bi-circle-half theme-icon-active" aria-hidden="true"></i>
+                                <span class="fw-medium d-none d-sm-inline"><?= t('theme', 'Theme') ?></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="bd-theme">
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                                        <i class="bi bi-sun-fill me-2"></i>
+                                        <?= t('theme_light', 'Light') ?>
+                                        <i class="bi bi-check2 ms-auto d-none"></i>
+                                        </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                                        <i class="bi bi-moon-stars-fill me-2"></i>
+                                        <?= t('theme_dark', 'Dark') ?>
+                                        <i class="bi bi-check2 ms-auto d-none"></i>
+                                        </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                                        <i class="bi bi-circle-half me-2"></i>
+                                        <?= t('theme_auto', 'Auto') ?>
+                                        <i class="bi bi-check2 ms-auto d-none"></i>
+                                        </button>
+                                        </li>
                             </ul>
                         </div>
-        
                     </div>
                 </div>
             </div>

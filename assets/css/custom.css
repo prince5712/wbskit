@@ -3,20 +3,94 @@
 
 /* Footer Styles */
 .footer {
+    background-color: #000000 !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer .footer-brand h5 {
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .footer a.footer-link {
+        transition: all 0.3s ease;
     position: relative;
+}
+
+.footer a.footer-link:hover {
+    color: #ffffff !important;
+    padding-left: 0.5rem;
+}
+
+.footer a.footer-social {
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer a.footer-social:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.footer .btn-outline-secondary {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .btn-outline-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+.bg-black {
     background-color: #000000 !important;
 }
 
-.footer .hover-opacity {
-    transition: opacity 0.2s ease-in-out;
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.footer .hover-opacity:hover {
-    opacity: 0.8;
+.border-secondary-emphasis {
+    border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.text-light-emphasis {
-    color: rgba(255, 255, 255, 0.75) !important;
+/* Dark theme dropdowns in footer */
+.dropdown-menu-dark {
+    background-color: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu-dark .dropdown-item {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.dropdown-menu-dark .dropdown-item:hover,
+.dropdown-menu-dark .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.dropdown-menu-dark .dropdown-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+    .footer h6 {
+        font-size: 0.875rem;
+    }
+        .footer .btn-sm {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.875rem;
+        }
 }
 /* Responsive Utilities */
 @media (max-width: 768px) {

@@ -25,16 +25,16 @@ include __DIR__ . '/../@/header.php';
                 <!-- Error Code -->
                 <div class="mb-4">
                     <h1 class="display-1 fw-bold text-warning">401</h1>
-                    <h2 class="h4 mb-3"><?= t('error_401_title', 'Unauthorized') ?></h2>
+                    <h2 class="h4 mb-3 text-body"><?= t('error_401_title', 'Unauthorized') ?></h2>
                 </div>
 
                 <!-- Error Message -->
-                <p class="lead mb-4 text-muted">
+                <p class="lead mb-4 text-body-secondary">
                     <?= t('error_401_message', 'You are not authenticated. Please log in to access this resource.') ?>
                 </p>
 
                 <!-- Additional Info -->
-                <div class="alert alert-info" role="alert">
+                <div class="alert alert-info border-info" role="alert">
                     <i class="bi bi-info-circle me-2"></i>
                     <?= t('error_login_required', 'Authentication is required to continue.') ?>
                 </div>

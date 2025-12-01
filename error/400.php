@@ -25,16 +25,16 @@ include __DIR__ . '/../@/header.php';
                 <!-- Error Code -->
                 <div class="mb-4">
                     <h1 class="display-1 fw-bold text-danger">400</h1>
-                    <h2 class="h4 mb-3"><?= t('error_400_title', 'Bad Request') ?></h2>
+                    <h2 class="h4 mb-3 text-body"><?= t('error_400_title', 'Bad Request') ?></h2>
                 </div>
 
                 <!-- Error Message -->
-                <p class="lead mb-4 text-muted">
+                <p class="lead mb-4 text-body-secondary">
                     <?= t('error_400_message', 'The request could not be understood or was malformed. Please check your request and try again.') ?>
                 </p>
 
                 <!-- Additional Info -->
-                <div class="alert alert-warning" role="alert">
+                <div class="alert alert-warning border-warning" role="alert">
                     <i class="bi bi-exclamation-triangle me-2"></i>
                     <?= t('error_check_syntax', 'Please verify that your request syntax is correct.') ?>
                 </div>

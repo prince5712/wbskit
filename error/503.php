@@ -25,25 +25,25 @@ include __DIR__ . '/../@/header.php';
                 <!-- Error Code -->
                 <div class="mb-4">
                     <h1 class="display-1 fw-bold text-warning">503</h1>
-                    <h2 class="h4 mb-3"><?= t('error_503_title', 'Service Unavailable') ?></h2>
+                    <h2 class="h4 mb-3 text-body"><?= t('error_503_title', 'Service Unavailable') ?></h2>
                 </div>
 
                 <!-- Error Message -->
-                <p class="lead mb-4 text-muted">
+                <p class="lead mb-4 text-body-secondary">
                     <?= t('error_503_message', 'The server is temporarily unable to handle the request. This is usually a temporary condition.') ?>
                 </p>
 
                 <!-- Additional Info -->
-                <div class="alert alert-warning" role="alert">
+                <div class="alert alert-warning border-warning" role="alert">
                     <i class="bi bi-hourglass-split me-2"></i>
                     <?= t('error_try_again', 'Please try again in a few moments.') ?>
                 </div>
 
                 <!-- Status & Retry Info -->
-                <div class="card bg-light mb-4">
+                <div class="card bg-body-tertiary mb-4">
                     <div class="card-body">
                         <p class="card-text mb-0">
-                            <small class="text-muted">
+                            <small class="text-body-secondary">
                                 <i class="bi bi-clock-history me-2"></i><?= t('error_maintenance', 'We are performing scheduled maintenance or experiencing high traffic.') ?>
                             </small>
                         </p>

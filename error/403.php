@@ -25,16 +25,16 @@ include __DIR__ . '/../@/header.php';
                 <!-- Error Code -->
                 <div class="mb-4">
                     <h1 class="display-1 fw-bold text-danger">403</h1>
-                    <h2 class="h4 mb-3"><?= t('error_403_title', 'Forbidden') ?></h2>
+                    <h2 class="h4 mb-3 text-body"><?= t('error_403_title', 'Forbidden') ?></h2>
                 </div>
 
                 <!-- Error Message -->
-                <p class="lead mb-4 text-muted">
+                <p class="lead mb-4 text-body-secondary">
                     <?= t('error_403_message', 'You do not have permission to access this resource. Your access has been denied.') ?>
                 </p>
 
                 <!-- Additional Info -->
-                <div class="alert alert-warning" role="alert">
+                <div class="alert alert-warning border-warning" role="alert">
                     <i class="bi bi-shield-exclamation me-2"></i>
                     <?= t('error_permission_denied', 'Access to this resource is restricted.') ?>
                 </div>

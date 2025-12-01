@@ -25,16 +25,16 @@ include __DIR__ . '/../@/header.php';
                 <!-- Error Code -->
                 <div class="mb-4">
                     <h1 class="display-1 fw-bold text-danger">404</h1>
-                    <h2 class="h4 mb-3"><?= t('error_404_title', 'Page Not Found') ?></h2>
+                    <h2 class="h4 mb-3 text-body"><?= t('error_404_title', 'Page Not Found') ?></h2>
                 </div>
 
                 <!-- Error Message -->
-                <p class="lead mb-4 text-muted">
+                <p class="lead mb-4 text-body-secondary">
                     <?= t('error_404_message', 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.') ?>
                 </p>
 
                 <!-- Additional Info -->
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger border-danger" role="alert">
                     <i class="bi bi-file-earmark-x me-2"></i>
                     <?= t('error_page_not_found', 'The requested resource does not exist.') ?>
                 </div>
