@@ -5,8 +5,12 @@ if (!isset($_GET['skip_splash']) && !isset($_SESSION['splash_shown'])) {
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
+
+    // Preserve language parameter if present
+    $lang_param = isset($_GET['lang']) ? '?lang=' . urlencode($_GET['lang']) : '';
+
     // Redirect to splash screen on first visit
-    header('Location: splash.php', true, 302);
+    header('Location: splash.php' . $lang_param, true, 302);
     exit();
 }
 

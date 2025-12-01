@@ -40,11 +40,12 @@ $available_languages = [
 define('SITE_BRAND', 'WBS Kit');
 
 // Navigation Configuration
+$current_page = basename($_SERVER['PHP_SELF']);
 $nav_items = [
-    ['title' => 'nav_home', 'href' => 'index.php', 'active' => false],
-    ['title' => 'nav_about', 'href' => 'about.php', 'active' => false],
-    ['title' => 'nav_services', 'href' => 'services.php', 'active' => false],
-    ['title' => 'nav_contact', 'href' => 'contact.php', 'active' => false]
+    ['title' => 'nav_home', 'href' => 'index.php', 'active' => $current_page === 'index.php'],
+    ['title' => 'nav_about', 'href' => 'about.php', 'active' => $current_page === 'about.php'],
+    ['title' => 'nav_services', 'href' => 'services.php', 'active' => $current_page === 'services.php'],
+    ['title' => 'nav_contact', 'href' => 'contact.php', 'active' => $current_page === 'contact.php']
 ];
 
 // Language Management

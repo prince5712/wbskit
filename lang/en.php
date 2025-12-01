@@ -5,6 +5,7 @@ return [
     'nav_about' => 'About',
     'nav_services' => 'Services',
     'nav_contact' => 'Contact',
+    'nav_active' => 'Active',
     
     // Theme
     'theme_light' => 'Light',
@@ -384,4 +385,9 @@ return [
     'privacy_contact_response' => 'We will respond to your privacy inquiries within 30 days.',
     'privacy_changes' => 'Changes to This Policy',
     'privacy_changes_content' => 'WBS Kit reserves the right to modify this Privacy Policy at any time. Changes will be effective when posted on the website. Your continued use of the website following the posting of changes means you accept the updated Privacy Policy.',
+
+    // Common Messages
+    'success' => 'Success',
+    'error' => 'Error',
+    'form_email_help' => 'We\'ll never share your email with anyone else.',
 ];

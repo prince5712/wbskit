@@ -209,8 +209,14 @@ $page_description = t('splash_description', 'Loading WBS Kit application...');
         
         setTimeout(() => {
             if (navigator.onLine) {
-                // Redirect to home with splash flag
-                window.location.href = 'index.php?skip_splash=1';
+                // Redirect to home with splash flag, preserving language parameter
+                const urlParams = new URLSearchParams(window.location.search);
+                const lang = urlParams.get('lang');
+                let redirectUrl = 'index.php?skip_splash=1';
+                if (lang) {
+                    redirectUrl += '&lang=' + encodeURIComponent(lang);
+                }
+                window.location.href = redirectUrl;
             } else {
                 // Show offline page
                 window.location.href = 'offline.php';
@@ -230,7 +236,14 @@ $page_description = t('splash_description', 'Loading WBS Kit application...');
         isRedirecting = true;
         
         if (navigator.onLine) {
-            window.location.href = 'index.php?skip_splash=1';
+            // Preserve language parameter when clicking continue button
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang');
+            let redirectUrl = 'index.php?skip_splash=1';
+            if (lang) {
+                redirectUrl += '&lang=' + encodeURIComponent(lang);
+            }
+            window.location.href = redirectUrl;
         } else {
             window.location.href = 'offline.php';
         }

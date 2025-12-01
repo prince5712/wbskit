@@ -111,7 +111,7 @@ $page_description = $page_description ?? SITE_DESCRIPTION;
     </svg>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.php">
                 <i class="bi bi-bootstrap-fill me-2"></i>
@@ -133,6 +133,9 @@ $page_description = $page_description ?? SITE_DESCRIPTION;
                             <a class="nav-link <?= $item['active'] ? 'active' : '' ?>" 
                                href="<?= $item['href'] ?>"
                                <?= $item['active'] ? 'aria-current="page"' : '' ?>>
+                                <?php if ($item['active']): ?>
+                                    <span class="badge bg-primary ms-2"><?= t('nav_active', 'Active') ?></span>
+                                <?php endif; ?>
                                 <?= t($item['title'], $item['title']) ?>
                             </a>
                         </li>

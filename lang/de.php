@@ -5,6 +5,7 @@ return [
     'nav_about' => 'Über uns',
     'nav_services' => 'Dienstleistungen',
     'nav_contact' => 'Kontakt',
+    'nav_active' => 'Aktiv',
     
     // Theme
     'theme_light' => 'Hell',
@@ -383,4 +384,9 @@ return [
     'privacy_contact_response' => 'Wir werden auf Ihre Datenschutzanfragen innerhalb von 30 Tagen antworten.',
     'privacy_changes' => 'Änderungen dieser Richtlinie',
     'privacy_changes_content' => 'WBS Kit behält sich das Recht vor, diese Datenschutzrichtlinie jederzeit zu ändern. Änderungen treten in Kraft, wenn sie auf der Website veröffentlicht werden. Ihre weitere Nutzung der Website nach der Veröffentlichung von Änderungen bedeutet, dass Sie die aktualisierte Datenschutzrichtlinie akzeptieren.',
+
+    // Common Messages
+    'success' => 'Erfolg',
+    'error' => 'Fehler',
+    'form_email_help' => 'Wir werden Ihre E-Mail niemals mit jemandem anderen teilen.',
 ];
