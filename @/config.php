@@ -9,16 +9,19 @@ define('SITE_TITLE', 'WBS Kit - Web Boilerplate Starter');
 define('SITE_DESCRIPTION', 'WBS Kit – A responsive PHP starter template using Bootstrap, supporting light/dark mode, multi-language, and offline handling.');
 define('SITE_KEYWORDS', 'PHP, Bootstrap, Starter Kit, Responsive, Dark Mode, Offline, Template');
 define('SITE_AUTHOR', 'prinsberwa');
-define('SITE_URL', 'https://example.com');
+define('SITE_URL', '/');
 define('THEME_COLOR_LIGHT', '#ffffff');
 define('THEME_COLOR_DARK', '#000000');
 
 // Paths Configuration
-define('ASSETS_PATH', 'assets/');
+$base_path = __DIR__ . '/';
+define('BASE_PATH', $base_path);
+define('ROOT_PATH', dirname($base_path) . '/');
+define('ASSETS_PATH', ROOT_PATH . 'assets/');
 define('CSS_PATH', ASSETS_PATH . 'css/');
 define('JS_PATH', ASSETS_PATH . 'js/');
-define('LANG_PATH', 'lang/');
-define('INCLUDES_PATH', '@/');
+define('LANG_PATH', ROOT_PATH . 'lang/');
+define('INCLUDES_PATH', BASE_PATH);
 
 // Default Settings
 define('DEFAULT_LANGUAGE', 'en');
